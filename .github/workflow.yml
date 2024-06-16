@@ -1,0 +1,31 @@
+name: "Deploy a PHP project"
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Check out"
+        uses: actions/checkout@v3
+
+      - name: "Set up ssh key"
+      - run: |
+          set -eu
+          mkdir "$HOME/.ssh"
+          echo "${{ secrets.key }}" > "$HOME/.ssh/key"
+          chmod 600 "$HOME/.ssh/key"
+      - name: "Composer install"
+        run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+      
+      - name: Sync
+        shell: bash
+        env:
+          USER: ${{ secrets.user }}
+          HOST: ${{ secrets.host }}
+          DIST: ${{ secrets.dist }}
+        run: rsync -avzO --no-perms -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --delete * $USER@$HOST:$DIST
