@@ -31,7 +31,6 @@ index_htm_files/6607.png
 index_htm_files/6608.png
 index_htm_files/6609.png
 index_htm_files/6610.png
-index_htm_files/18844.jpg
 index_htm_files/18928.png
 index_htm_files/18929.png
 index_htm_files/18930.png
@@ -47,6 +46,7 @@ index_htm_files/14949.jpg
 index_htm_files/17299.jpg
 index_htm_files/18046.jpg
 index_htm_files/6631.jpg
+index_htm_files/18942.jpg
 index_htm_files/16341@2x.png
 index_htm_files/6581@2x.png
 index_htm_files/6582@2x.png
@@ -74,10 +74,10 @@ index_htm_files/6607@2x.png
 index_htm_files/6608@2x.png
 index_htm_files/6609@2x.png
 index_htm_files/6610@2x.png
-index_htm_files/18844@2x.jpg
+index_htm_files/18945.jpg
+index_htm_files/18945@2x.jpg
 index_htm_files/17740@2x.png
 index_htm_files/17306@2x.jpg
-index_htm_files/18942.jpg
 index_htm_files/18942@2x.jpg
 index_htm_files/17297@2x.jpg
 index_htm_files/14949@2x.jpg
