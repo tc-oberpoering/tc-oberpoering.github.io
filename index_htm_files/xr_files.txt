@@ -46,7 +46,7 @@ index_htm_files/14949.jpg
 index_htm_files/17299.jpg
 index_htm_files/18046.jpg
 index_htm_files/6631.jpg
-index_htm_files/18956.jpg
+index_htm_files/18960.jpg
 index_htm_files/16341@2x.png
 index_htm_files/6581@2x.png
 index_htm_files/6582@2x.png
@@ -74,18 +74,16 @@ index_htm_files/6607@2x.png
 index_htm_files/6608@2x.png
 index_htm_files/6609@2x.png
 index_htm_files/6610@2x.png
-index_htm_files/18960.jpg
 index_htm_files/18960@2x.jpg
 index_htm_files/17740@2x.png
 index_htm_files/17306@2x.jpg
-index_htm_files/18956@2x.jpg
 index_htm_files/17297@2x.jpg
 index_htm_files/14949@2x.jpg
 index_htm_files/17299@2x.jpg
 index_htm_files/18046@2x.jpg
 index_htm_files/6631@2x.jpg
 index_htm_files/TCO-Anleitung-Platzbuchungssystem-eTennis.pdf
-index_htm_files/2025-Uebersicht-Spieltage.pdf
+index_htm_files/2025-Uebersicht-Spieltage4.pdf
 index_htm_files/2025-Uebersicht-Spieltage1.pdf
 index_htm_files/Uebersicht-Spieltage36.pdf
 index_htm_files/Uebersicht-Spieltage35.pdf
@@ -121,6 +119,7 @@ index_htm_files/csvtable.css
 index_htm_files/0.gif
 index_htm_files/bg.gif
 index_htm_files/asc.gif
+index_htm_files/2025-Uebersicht-Spieltage3.pdf
 index_htm_files/Uebersicht-Spieltage32.pdf
 index_htm_files/Uebersicht-Spieltage31.pdf
 index_htm_files/Uebersicht-Spieltage26.pdf
@@ -140,6 +139,7 @@ index_htm_files/2024-05-03-Uebersicht-Spieltage5.pdf
 index_htm_files/2024-05-03-Uebersicht-Spieltage4.pdf
 index_htm_files/2024-05-03-Uebersicht-Spieltage1.pdf
 index_htm_files/2024-06-08-Uebersicht-Spieltage.pdf
+index_htm_files/2025-Uebersicht-Spieltage2.pdf
 index_htm_files/Uebersicht-Spieltage34.pdf
 index_htm_files/Uebersicht-Spieltage33.pdf
 index_htm_files/Uebersicht-Spieltage28.pdf
@@ -158,7 +158,7 @@ index_htm_files/2024-06-09-Uebersicht-Spieltage1.pdf
 index_htm_files/2024-05-11-Uebersicht-Spieltage3.pdf
 index_htm_files/2024-05-03-Uebersicht-Spieltage7.pdf
 index_htm_files/2024-05-03-Uebersicht-Spieltage6.pdf
-index_htm_files/TCO-Uebersicht-aller-Dorfmeisterschaften-seit-2002.pdf
+index_htm_files/Alle Tennisdorfmeister seit 2002.pdf
 index_htm_files/2025-TCO-Aufnahmeantrag.pdf
 index_htm_files/2024-TCO-Aufnahmeantrag-ganz-Neu1.docx
 index_htm_files/2024-TCO-Aufnahmeantrag-ganz-Neu.docx
