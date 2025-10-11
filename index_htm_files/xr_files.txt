@@ -29,7 +29,6 @@ index_htm_files/6607.png
 index_htm_files/6608.png
 index_htm_files/6609.png
 index_htm_files/6610.png
-index_htm_files/19084.jpg
 index_htm_files/19119.png
 index_htm_files/19120.png
 index_htm_files/19121.png
@@ -73,7 +72,8 @@ index_htm_files/6607@2x.png
 index_htm_files/6608@2x.png
 index_htm_files/6609@2x.png
 index_htm_files/6610@2x.png
-index_htm_files/19084@2x.jpg
+index_htm_files/19159.jpg
+index_htm_files/19159@2x.jpg
 index_htm_files/17740@2x.png
 index_htm_files/17306@2x.jpg
 index_htm_files/18972@2x.jpg
