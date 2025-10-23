@@ -64,6 +64,8 @@ index_htm_files/17736@2x.png
 index_htm_files/17737@2x.png
 index_htm_files/17738@2x.jpg
 index_htm_files/17739@2x.jpg
+index_htm_files/19228.jpg
+index_htm_files/19228@2x.jpg
 index_htm_files/6602@2x.png
 index_htm_files/6603@2x.png
 index_htm_files/6604@2x.png
