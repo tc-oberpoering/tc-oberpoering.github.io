@@ -1,14 +1,14 @@
-window.local_table1_44_data = [
+window.local_table1_45_data = [
 {
- csv: "Herren:\u000A\u000A1. Mario Vogl\u000A2. Stefan Salzberger\u000A3. Stefan Weinmann",
- first: "index_htm_files/19203.png",
- firstdark: "index_htm_files/19204.png",
- last: "index_htm_files/19205.png",
- lastdark: "index_htm_files/19206.png",
- next: "index_htm_files/19207.png",
- nextdark: "index_htm_files/19208.png",
- prev: "index_htm_files/19209.png",
- prevdark: "index_htm_files/19210.png",
+ csv: "Mixed Doppel:\u000A\u000A1. Sabrina Ebner / Stefan Salzberger\u000A2. Maxi Teresa F\u00FChrmann / Tobias F\u00FChrmann\u000A3. Christina Borst / Florian Sch\u00F6nhofer",
+ first: "index_htm_files/19332.png",
+ firstdark: "index_htm_files/19333.png",
+ last: "index_htm_files/19334.png",
+ lastdark: "index_htm_files/19335.png",
+ next: "index_htm_files/19336.png",
+ nextdark: "index_htm_files/19337.png",
+ prev: "index_htm_files/19338.png",
+ prevdark: "index_htm_files/19339.png",
  rows: "4",
  theme: "1"
 }
