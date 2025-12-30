@@ -1,5 +1,6 @@
 # Ignore Xara-generated files (keep for reference but don't commit changes)
 index.htm.old
+index.htm.backup
 index.html.orig
 
 # Ignore macOS files
