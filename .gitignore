@@ -1,0 +1,21 @@
+# Ignore Xara-generated files (keep for reference but don't commit changes)
+index.htm.old
+index.html.orig
+
+# Ignore macOS files
+.DS_Store
+
+# Ignore editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Ignore temporary files
+tmp/
+*.tmp
+*.bak
+
+# Ignore node_modules if we add any build tools later
+node_modules/

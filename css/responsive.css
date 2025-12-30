@@ -1,0 +1,210 @@
+/* TC Oberpöring - Responsive Styles */
+
+/* Tablet - 768px and below */
+@media screen and (max-width: 768px) {
+    /* Header */
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+        flex-direction: column;
+    }
+
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    /* Navigation */
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--primary-blue);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu > li {
+        width: 100%;
+    }
+
+    .nav-menu > li > a {
+        padding: 15px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Dropdown adjustments */
+    .nav-menu li ul {
+        position: static;
+        display: none;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .nav-menu li.active > ul {
+        display: block;
+    }
+
+    .nav-menu li ul li a {
+        padding-left: 40px;
+        background-color: var(--dark-gray);
+    }
+
+    /* Content */
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .content-section {
+        padding: 20px;
+    }
+
+    .content-section h2 {
+        font-size: 1.5rem;
+    }
+
+    /* External Links */
+    .external-links {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    /* Tables */
+    .schedule-table {
+        overflow-x: auto;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    table th,
+    table td {
+        padding: 8px 10px;
+    }
+}
+
+/* Mobile - 480px and below */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    .logo h1 {
+        font-size: 1.3rem;
+    }
+
+    .page-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .page-header p {
+        font-size: 1rem;
+    }
+
+    .content-section {
+        padding: 15px;
+    }
+
+    .content-section h2 {
+        font-size: 1.3rem;
+    }
+
+    .content-section h3 {
+        font-size: 1.1rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .welcome-box {
+        padding: 25px 20px;
+    }
+
+    .welcome-box h2 {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    main {
+        padding: 20px 0;
+    }
+
+    footer {
+        padding: 30px 0 15px;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+
+    table th,
+    table td {
+        padding: 6px 8px;
+    }
+}
+
+/* Large Desktop - 1200px and above */
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1400px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    header,
+    footer,
+    nav,
+    .menu-toggle {
+        display: none;
+    }
+
+    main {
+        padding: 0;
+    }
+
+    .content-section {
+        page-break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+
+    a {
+        text-decoration: underline;
+        color: #000;
+    }
+
+    a[href^="http"]:after {
+        content: " (" attr(href) ")";
+    }
+}
