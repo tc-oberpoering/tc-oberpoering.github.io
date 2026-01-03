@@ -76,7 +76,7 @@ Diese Website ist eine moderne, mobilfreundliche Version der TC Oberpöring Home
 3. Fügen Sie einen neuen Link hinzu:
 
 ```html
-<li><a href="documents/dateiname.pdf">Beschreibung des Dokuments</a></li>
+<li><a href="dokumente/dateiname.pdf">Beschreibung des Dokuments</a></li>
 ```
 
 4. Speichern Sie die Datei
