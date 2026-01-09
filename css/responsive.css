@@ -180,6 +180,44 @@
     }
 }
 
+/* Responsive handling */
+@media (max-width: 768px) {
+    .board-table {
+        font-size: 0.9rem;
+    }
+
+    .board-table thead {
+        display: none;
+    }
+
+    .board-table tr {
+        display: block;
+        margin-bottom: 1rem;
+        border: 1px solid #e6e8eb;
+        border-radius: 6px;
+        padding: 0.5rem;
+    }
+
+    .board-table th {
+        padding: 6px 10px;
+    }
+
+    .board-table td {
+        display: flex;
+        justify-content: space-between;
+        padding: 6px 8px;
+        border: none;
+        padding: 6px 10px;
+    }
+
+    .board-table td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #6b7280;
+        margin-right: 1rem;
+    }
+}
+
 /* Print Styles */
 @media print {
     header,

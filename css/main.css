@@ -175,6 +175,50 @@ main {
     margin-top: 20px;
 }
 
+.board-table {
+    width: auto;                 /* prevents unnecessary stretching */
+    max-width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                 "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 0.95rem;
+    color: #2f2f2f;
+}
+
+/* Header */
+.board-table th {
+    text-align: left;
+    padding: 6px 8px;            /* MUCH tighter columns */
+    font-weight: 600;
+    background-color: #f5f7f9;
+    border-bottom: 2px solid #d8dce1;
+    white-space: nowrap;
+}
+
+/* Body cells */
+.board-table td {
+    padding: 5px 8px;            /* tight horizontal spacing */
+    border-bottom: 1px solid #e3e6ea;
+    white-space: nowrap;         /* keeps columns compact */
+}
+
+/* Optional: allow long text only where needed */
+.board-table td.wrap {
+    white-space: normal;
+}
+
+/* Hover */
+.board-table tbody tr:hover {
+    background-color: #fafbfc;
+}
+
+/* Emphasize names slightly */
+.board-table td:first-child {
+    font-weight: 500;
+    color: #1f2937;
+}
+
 .page-header {
     text-align: center;
     margin-bottom: 40px;
