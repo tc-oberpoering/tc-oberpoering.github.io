@@ -1,0 +1,5 @@
+Fett: <strong>fett</strong>
+Krusiv: <strong>kursiv</strong>
+Neue Zeile: <br>
+Farbig: <span style="color: red;">Hier dein roter Text</span>
+Schriftart:  <span style="font-family: 'Arial';">Hier dein Text in Arial</span>
