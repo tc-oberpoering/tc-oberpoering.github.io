@@ -3,4 +3,10 @@ Krusiv: <strong>kursiv</strong>
 Neue Zeile: <br>
 Farbig: <span style="color: red;">Hier dein roter Text</span>
 Schriftart:  <span style="font-family: 'Arial';">Hier dein Text in Arial</span>
+<<<<<<< HEAD
 Kommentar: <!-- Hier dein Kommentar -->
+=======
+
+-> falls man eine Zeile mit Aktualisierungsdatum der Seite einfügen möchte: 
+ <p class="news-date">Aktualisiert am 24. Dezember 2025</p>
+>>>>>>> af644bb (Update website)
