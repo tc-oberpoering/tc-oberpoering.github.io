@@ -10,3 +10,11 @@ Kommentar: <!-- Hier dein Kommentar -->
 -> falls man eine Zeile mit Aktualisierungsdatum der Seite einfügen möchte: 
  <p class="news-date">Aktualisiert am 24. Dezember 2025</p>
 >>>>>>> af644bb (Update website)
+
+
+     <!-- Video einbinden -->
+        <video controls poster="vorschaubild.jpg">
+            <source src="video.mp4" type="video/mp4">
+            <source src="video.webm" type="video/webm">
+            Ihr Browser unterstützt das Video-Tag nicht.
+        </video>
