@@ -108,14 +108,35 @@
         grid-template-columns: 1fr;
     }
     
-    html,
-    body {
-        overflow-x: hidden;
-    }
+    /* Do not hide page horizontal overflow — allow internal scrolling for wide tables */
 
     /* Tables */
     .schedule-table {
         overflow-x: auto;
+    }
+
+    /* Make tables horizontally scrollable on small and medium screens.
+       We don't wrap HTML tables in extra markup across the site, so
+       enable scrolling on the table element itself. */
+    .match-table,
+    .board-table,
+    .schedule-table,
+    table {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap; /* keep columns on single line so horizontal scroll appears */
+    }
+
+    /* Keep table rows structured but allow horizontal overflow for cells */
+    table thead,
+    table tbody,
+    table tr {
+        display: table;
+        width: 100%;
+        table-layout: auto;
     }
 
     table {
