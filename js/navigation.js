@@ -1,11 +1,17 @@
 // TC Oberpöring - Navigation System
 
-document.addEventListener('DOMContentLoaded', function() {
+function initAllNavigation() {
     initMobileMenu();
     initDropdownMenus();
     highlightActivePage();
     initSmoothScrolling();
-});
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAllNavigation);
+} else {
+    initAllNavigation();
+}
 
 // Mobile Menu Toggle
 function initMobileMenu() {
@@ -15,7 +21,9 @@ function initMobileMenu() {
     if (menuToggle && navMenu) {
         menuToggle.setAttribute('aria-expanded', 'false');
 
-        menuToggle.addEventListener('click', function() {
+        // Use pointerdown to support both mouse and touch reliably
+        const toggleHandler = function(e) {
+            e.preventDefault();
             navMenu.classList.toggle('active');
             const isOpen = navMenu.classList.contains('active');
             menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
@@ -24,15 +32,20 @@ function initMobileMenu() {
                 const activeItems = navMenu.querySelectorAll('li.active');
                 activeItems.forEach(item => item.classList.remove('active'));
             }
-            
+
             // Animate icon
-            const icon = this.querySelector('i') || this;
-            if (isOpen) {
-                icon.textContent = '✕';
-            } else {
-                icon.textContent = '☰';
+            const icon = menuToggle.querySelector('i') || menuToggle;
+            icon.textContent = isOpen ? '✕' : '☰';
+        };
+
+        menuToggle.addEventListener('pointerdown', toggleHandler);
+        menuToggle.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleHandler(e);
             }
         });
+        
     }
 }
 

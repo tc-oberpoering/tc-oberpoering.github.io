@@ -47,9 +47,7 @@ body {
 header {
     background-color: var(--background);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    position: relative;
 }
 
 .header-top {
@@ -89,6 +87,8 @@ header {
 /* Navigation */
 nav {
     background-color: var(--primary-blue);
+    position: sticky;
+    top: 0;
     width: 100%;
     z-index: 1000; /* make sure nav stays above content */
 }
@@ -175,6 +175,13 @@ main {
     min-height: calc(100vh - 400px);
     padding: 40px 0;
     margin-top: 20px;
+}
+
+/* Table wrapper for horizontal scrolling without breaking table semantics */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .board-table {

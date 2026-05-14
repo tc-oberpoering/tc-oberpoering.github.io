@@ -115,10 +115,11 @@
         overflow-x: auto;
     }
 
-    /* Keep table display semantics for proper header/body alignment,
-       but allow horizontal scrolling inside the page container so
-       wide tables remain accessible without breaking column alignment. */
-    .container {
+    /* Keep table display semantics for proper header/body alignment.
+       Use the .table-wrapper element to enable horizontal scrolling
+       without changing table display. */
+    .table-wrapper {
+        width: 100%;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
     }
@@ -128,8 +129,7 @@
     .schedule-table,
     table {
         width: 100%;
-        max-width: none;
-        white-space: nowrap; /* prefer horizontal scroll over wrapping */
+        max-width: 100%;
         table-layout: auto;
     }
 
