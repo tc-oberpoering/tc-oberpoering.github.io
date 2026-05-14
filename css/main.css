@@ -89,7 +89,6 @@ header {
 /* Navigation */
 nav {
     background-color: var(--primary-blue);
-    position: fixed;
     width: 100%;
     z-index: 1000; /* make sure nav stays above content */
 }
@@ -99,6 +98,7 @@ nav {
     justify-content: space-between; /* ensures toggle is visible */
     align-items: center;
     padding: 0 1rem;
+    position: relative;
 }
 
 /* Menu */
@@ -107,6 +107,7 @@ nav {
     list-style: none;
     margin: 0;
     padding: 0;
+    align-items: center;
 }
 
 .nav-menu > li {
@@ -161,8 +162,9 @@ nav {
     display: none; /* hidden on desktop */
     background: none;
     border: none;
-    color: black;
+    color: white;
     font-size: 1.8rem;
+    line-height: 1;
     cursor: pointer;
     padding: 10px;
     z-index: 1100; /* above nav menu */

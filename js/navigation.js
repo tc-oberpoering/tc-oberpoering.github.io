@@ -13,12 +13,21 @@ function initMobileMenu() {
     const navMenu = document.querySelector('.nav-menu');
     
     if (menuToggle && navMenu) {
+        menuToggle.setAttribute('aria-expanded', 'false');
+
         menuToggle.addEventListener('click', function() {
             navMenu.classList.toggle('active');
+            const isOpen = navMenu.classList.contains('active');
+            menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+
+            if (!isOpen) {
+                const activeItems = navMenu.querySelectorAll('li.active');
+                activeItems.forEach(item => item.classList.remove('active'));
+            }
             
             // Animate icon
             const icon = this.querySelector('i') || this;
-            if (navMenu.classList.contains('active')) {
+            if (isOpen) {
                 icon.textContent = '✕';
             } else {
                 icon.textContent = '☰';
@@ -32,11 +41,27 @@ function initDropdownMenus() {
     const dropdownToggles = document.querySelectorAll('.nav-menu > li > a[aria-haspopup="true"]');
     
     dropdownToggles.forEach(toggle => {
+        toggle.setAttribute('aria-expanded', 'false');
+
         toggle.addEventListener('click', function(e) {
             if (window.innerWidth <= 768) {
                 e.preventDefault();
                 const parentLi = this.parentElement;
+                const isActive = parentLi.classList.contains('active');
+                const siblings = parentLi.parentElement.querySelectorAll(':scope > li.active');
+
+                siblings.forEach(item => {
+                    if (item !== parentLi) {
+                        item.classList.remove('active');
+                        const siblingToggle = item.querySelector(':scope > a[aria-haspopup="true"]');
+                        if (siblingToggle) {
+                            siblingToggle.setAttribute('aria-expanded', 'false');
+                        }
+                    }
+                });
+
                 parentLi.classList.toggle('active');
+                this.setAttribute('aria-expanded', isActive ? 'false' : 'true');
             }
         });
     });
@@ -98,9 +123,16 @@ document.addEventListener('click', function(e) {
         if (!nav.contains(e.target)) {
             navMenu.classList.remove('active');
             if (menuToggle) {
+                menuToggle.setAttribute('aria-expanded', 'false');
                 const icon = menuToggle.querySelector('i') || menuToggle;
                 icon.textContent = '☰';
             }
+
+            const openDropdowns = navMenu.querySelectorAll('li.active');
+            openDropdowns.forEach(item => item.classList.remove('active'));
+
+            const dropdownToggles = navMenu.querySelectorAll('a[aria-haspopup="true"]');
+            dropdownToggles.forEach(toggle => toggle.setAttribute('aria-expanded', 'false'));
         }
     }
 });
@@ -113,6 +145,16 @@ window.addEventListener('resize', function() {
         const navMenu = document.querySelector('.nav-menu');
         if (window.innerWidth > 768 && navMenu) {
             navMenu.classList.remove('active');
+            const menuToggle = document.querySelector('.menu-toggle');
+            if (menuToggle) {
+                menuToggle.setAttribute('aria-expanded', 'false');
+                const icon = menuToggle.querySelector('i') || menuToggle;
+                icon.textContent = '☰';
+            }
+
+            const dropdownToggles = document.querySelectorAll('.nav-menu > li > a[aria-haspopup="true"]');
+            dropdownToggles.forEach(toggle => toggle.setAttribute('aria-expanded', 'false'));
+
             // Remove active class from dropdown parents
             const activeItems = document.querySelectorAll('.nav-menu > li.active');
             activeItems.forEach(item => {

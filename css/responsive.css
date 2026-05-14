@@ -2,10 +2,12 @@
 
 /* Tablet - 768px and below */
 @media screen and (max-width: 768px) {
-    /* Header */
+    header, 
     .header-content {
         flex-direction: column;
         text-align: center;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .logo {
@@ -18,22 +20,34 @@
     }
 
     /* Navigation */
+    .nav-container {
+        min-height: 52px;
+        padding: 0;
+    }
+
     .menu-toggle {
         display: block;
         position: absolute;
-        right: 20px;
+        right: 0;
         top: 50%;
         transform: translateY(-50%);
+        z-index: 1100;
     }
 
     .nav-menu {
         display: none;
         flex-direction: column;
-        width: 100%;
+        align-items: stretch;
         position: absolute;
         top: 100%;
         left: 0;
+        right: 0;
+        width: 100%;
         background-color: var(--primary-blue);
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+        max-height: calc(100vh - 140px);
+        overflow-y: auto;
+        z-index: 999;
     }
 
     .nav-menu.active {
@@ -55,9 +69,14 @@
         display: none;
         width: 100%;
         box-shadow: none;
+        background-color: var(--dark-gray);
     }
 
-    .nav-menu li.active > ul {
+    .nav-menu li:hover > ul {
+        display: none;
+    }
+
+    .nav-menu > li.active > ul {
         display: block;
     }
 
@@ -88,6 +107,11 @@
     .footer-content {
         grid-template-columns: 1fr;
     }
+    
+    html,
+    body {
+        overflow-x: hidden;
+    }
 
     /* Tables */
     .schedule-table {
@@ -101,6 +125,12 @@
     table th,
     table td {
         padding: 8px 10px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .nav-menu {
+        display: flex !important;
     }
 }
 
