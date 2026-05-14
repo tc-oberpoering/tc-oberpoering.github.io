@@ -115,27 +115,21 @@
         overflow-x: auto;
     }
 
-    /* Make tables horizontally scrollable on small and medium screens.
-       We don't wrap HTML tables in extra markup across the site, so
-       enable scrolling on the table element itself. */
+    /* Keep table display semantics for proper header/body alignment,
+       but allow horizontal scrolling inside the page container so
+       wide tables remain accessible without breaking column alignment. */
+    .container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
     .match-table,
     .board-table,
     .schedule-table,
     table {
-        display: block;
         width: 100%;
-        max-width: 100%;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        white-space: nowrap; /* keep columns on single line so horizontal scroll appears */
-    }
-
-    /* Keep table rows structured but allow horizontal overflow for cells */
-    table thead,
-    table tbody,
-    table tr {
-        display: table;
-        width: 100%;
+        max-width: none;
+        white-space: nowrap; /* prefer horizontal scroll over wrapping */
         table-layout: auto;
     }
 
